@@ -12,7 +12,7 @@ A simple Telegram bot using **Telethon** that can:
 1. **Clone the repository** (after you push it to GitHub):
 
    ```
-   git clone https://github.com/<your-username>/<your-repo>.git
+   git clone https://github.com/<AmirNakheSabz>/<telegram-math-bot>.git
    cd <your-repo>
    ```
 
@@ -73,13 +73,6 @@ A simple Telegram bot using **Telethon** that can:
   ```
   /compare 5 10
   ```
-
----
-
-## Security Notes
-
-* Do **not** commit your `.env` file or Telethon session files to GitHub.
-* Rotate your API credentials immediately if they are ever exposed.
 
 ---
 
