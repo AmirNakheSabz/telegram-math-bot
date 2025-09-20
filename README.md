@@ -13,7 +13,7 @@ A simple Telegram bot using **Telethon** that can:
 
    ```
    git clone https://github.com/<AmirNakheSabz>/<telegram-math-bot>.git
-   cd <your-repo>
+   cd <telegram-math-bot>
    ```
 
 2. **Create a virtual environment** (recommended):
