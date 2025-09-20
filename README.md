@@ -9,11 +9,11 @@ A simple Telegram bot using **Telethon** that can:
 
 ## Setup
 
-1. **Clone the repository** (after you push it to GitHub):
+1. **Clone the repository**:
 
    ```
-   git clone https://github.com/<AmirNakheSabz>/<telegram-math-bot>.git
-   cd <telegram-math-bot>
+   git clone https://github.com/AmirNakheSabz/telegram-math-bot.git
+   cd telegram-math-bot
    ```
 
 2. **Create a virtual environment** (recommended):
