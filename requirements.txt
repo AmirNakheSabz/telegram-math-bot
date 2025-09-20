@@ -1,0 +1,3 @@
+telethon
+sympy
+python-dotenv
