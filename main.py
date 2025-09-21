@@ -26,6 +26,19 @@ def solve_eq(eq):
         return eq, [] if not eq else [{"result": True}]
     solutions = solve(eq, vars_symbols, dict=True)
     return eq, solutions[0]
+def gcollatz(n:int) -> str:
+    start_n = n
+    ns = []
+    while n != 1:
+        if n % 2 == 0:
+            n = int(n / 2)
+            ns.append(n)
+        else:
+            n = int(3 * n + 1)
+            ns.append(n)
+    ststr = f"your starting number is {start_n}"
+    result_str = "\n".join(f"the new number is {n}" for n in ns)
+    return ststr + result_str
 
 @client.on(events.NewMessage(pattern="/slove"))
 async def give_res(event):
@@ -49,5 +62,11 @@ async def give_ress(event):
         await event.reply(f"the number {x} is equal to the number {y}")
     else:
         return
+@client.on(events.NewMessage(pattern="/collatz"))
+async def return_collatz(event):
+    text = event.text
+    n = int(text.strip("/collatz "))
+    result = gcollatz(n=n)
+    await event.reply(result)
 print("bot is running...")
 client.run_until_disconnected()
