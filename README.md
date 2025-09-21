@@ -4,6 +4,7 @@ A simple Telegram bot using **Telethon** that can:
 
 * Solve math equations with `/slove`
 * Compare two numbers with `/compare`
+* Use the Collatz Conjecture with `/collatz`
 
 ---
 
@@ -73,6 +74,14 @@ A simple Telegram bot using **Telethon** that can:
   ```
   /compare 5 10
   ```
+
+* `/collatz <n>`
+    Use Collatz Conjecture
+    Example:
+
+    ```
+    /collatz 27
+    ```
 
 ---
 
