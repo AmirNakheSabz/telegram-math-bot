@@ -38,7 +38,7 @@ def gcollatz(n:int) -> str:
             ns.append(n)
     ststr = f"your starting number is {start_n}"
     result_str = "\n".join(f"the new number is {n}" for n in ns)
-    return ststr + result_str
+    return ststr + "\n" + result_str
 
 @client.on(events.NewMessage(pattern="/slove"))
 async def give_res(event):
@@ -65,7 +65,11 @@ async def give_ress(event):
 @client.on(events.NewMessage(pattern="/collatz"))
 async def return_collatz(event):
     text = event.text
-    n = int(text.strip("/collatz "))
+    parts = text.split(maxsplit=1)
+    if len(parts) != 2 or not parts[1].isdigit():
+        await event.reply("Usage: `/collatz <number>`")
+        return
+    n = int(parts[1])
     result = gcollatz(n=n)
     await event.reply(result)
 print("bot is running...")
