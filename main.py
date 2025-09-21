@@ -72,5 +72,5 @@ async def return_collatz(event):
     n = int(parts[1])
     result = gcollatz(n=n)
     await event.reply(result)
-print("bot is running...")
+print("bot is now running...")
 client.run_until_disconnected()
